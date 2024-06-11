@@ -1,0 +1,486 @@
+{
+	"id": "fc379984-9448-44c4-9429-30ad517fee2f",
+	"name": "TMDB",
+	"timestamp": "2024-06-11T11:47:21.236Z",
+	"collection_id": "34508183-7fcc8e16-ed14-4de8-936c-51130c8423a9",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 19,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-11T11:47:17.040Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6bb3d514-204e-4ed3-a598-a5bdb85f9f1e",
+			"name": "API Authentication token",
+			"url": "https://api.themoviedb.org/3/authentication/token/new",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify if status code is 200": true,
+				"Verify if the response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Verify if status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if the response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Verify if status code is 200": true,
+					"Verify if the response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "715c82e8-6959-41b4-9954-9af6fdf1dd48",
+			"name": "New session ID",
+			"url": "https://api.themoviedb.org/3/authentication/session/new",
+			"time": 155,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response time is less than 400ms": true,
+				"Verify if it's possible to generate a new session ID with wrong token": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if it's possible to generate a new session ID with wrong token": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				155
+			],
+			"allTests": [
+				{
+					"Response time is less than 400ms": true,
+					"Verify if it's possible to generate a new session ID with wrong token": true
+				}
+			]
+		},
+		{
+			"id": "d840eea6-94bb-4b58-a260-350860ca6e0d",
+			"name": "Create a list",
+			"url": "https://api.themoviedb.org/3/list?session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb",
+			"time": 345,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verify if response time is less than 500ms": true,
+				"Verify if status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Verify if response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				345
+			],
+			"allTests": [
+				{
+					"Verify if response time is less than 500ms": true,
+					"Verify if status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "9ce2d0ee-6b7d-4764-ac82-de634c5a4155",
+			"name": "Display lists",
+			"url": "https://api.themoviedb.org/3/account/21294757/lists?page=1&session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify if status code is 200": true,
+				"Verify if response time is less than 200ms": true,
+				"Verify if the first list has less than 5 items": true
+			},
+			"testPassFailCounts": {
+				"Verify if status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if the first list has less than 5 items": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Verify if status code is 200": true,
+					"Verify if response time is less than 200ms": true,
+					"Verify if the first list has less than 5 items": true
+				}
+			]
+		},
+		{
+			"id": "fa8709de-487e-4e32-83cc-6d37688558ad",
+			"name": "Add movie to a list",
+			"url": "https://api.themoviedb.org/3/list/8302327/add_item?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0",
+			"time": 290,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Verify if it's possible to add to the list a movie that already exists": true
+			},
+			"testPassFailCounts": {
+				"Verify if it's possible to add to the list a movie that already exists": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				290
+			],
+			"allTests": [
+				{
+					"Verify if it's possible to add to the list a movie that already exists": true
+				}
+			]
+		},
+		{
+			"id": "84386924-1364-4798-a400-605c7c58de59",
+			"name": "Delete a list",
+			"url": "https://api.themoviedb.org/3/list/8302332?session=619a1e58931c6edd39267f40ca2bc781321fb7e0",
+			"time": 279,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verify if a list can be deleted a second time": true
+			},
+			"testPassFailCounts": {
+				"Verify if a list can be deleted a second time": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				279
+			],
+			"allTests": [
+				{
+					"Verify if a list can be deleted a second time": true
+				}
+			]
+		},
+		{
+			"id": "1b2b00e7-cc59-47a8-bf81-5a342f893a75",
+			"name": "Search a movie",
+			"url": "https://api.themoviedb.org/3/search/movie?query=fifth element&include_adult=false&language=en-US&primary_release_year=&page=1&region=USA&year=",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify if the search returned less than 3 items": true
+			},
+			"testPassFailCounts": {
+				"Verify if the search returned less than 3 items": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Verify if the search returned less than 3 items": true
+				}
+			]
+		},
+		{
+			"id": "f4485207-2373-4b6b-b276-e7c7a6abe4d7",
+			"name": "Add movie to watchlist",
+			"url": "https://api.themoviedb.org/3/account/21294757/watchlist?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0",
+			"time": 155,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verify if a movie was successfully added to the watchlist": true
+			},
+			"testPassFailCounts": {
+				"Verify if a movie was successfully added to the watchlist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				155
+			],
+			"allTests": [
+				{
+					"Verify if a movie was successfully added to the watchlist": true
+				}
+			]
+		},
+		{
+			"id": "71e432cf-6656-48d0-8fbd-96457fd7d5b8",
+			"name": "Display watchlist movies",
+			"url": "https://api.themoviedb.org/3/account/21294757/watchlist/movies",
+			"time": 164,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify if the first movie in the watchlist is not an adult movie": true
+			},
+			"testPassFailCounts": {
+				"Verify if the first movie in the watchlist is not an adult movie": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				164
+			],
+			"allTests": [
+				{
+					"Verify if the first movie in the watchlist is not an adult movie": true
+				}
+			]
+		},
+		{
+			"id": "c3730f99-e241-4a13-9561-804366367b26",
+			"name": "Add movie to favorites",
+			"url": "https://api.themoviedb.org/3/account/21294757/favorite?session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb",
+			"time": 284,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verify if a movie was successfully added to favorites": true
+			},
+			"testPassFailCounts": {
+				"Verify if a movie was successfully added to favorites": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				284
+			],
+			"allTests": [
+				{
+					"Verify if a movie was successfully added to favorites": true
+				}
+			]
+		},
+		{
+			"id": "c34c1c54-d08c-4100-a5fb-f4bcbe5efca9",
+			"name": "Display favorite movies",
+			"url": "https://api.themoviedb.org/3/account/21294757/favorite/movies",
+			"time": 167,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify if the favorites movies list has less than 4 items": true
+			},
+			"testPassFailCounts": {
+				"Verify if the favorites movies list has less than 4 items": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				167
+			],
+			"allTests": [
+				{
+					"Verify if the favorites movies list has less than 4 items": true
+				}
+			]
+		},
+		{
+			"id": "41f13c53-c473-4cdd-bb4f-959ac94a9536",
+			"name": "Add rating",
+			"url": "https://api.themoviedb.org/3/movie/614933/rating?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0",
+			"time": 285,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verify if a rating was successfully added to a movie": true
+			},
+			"testPassFailCounts": {
+				"Verify if a rating was successfully added to a movie": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				285
+			],
+			"allTests": [
+				{
+					"Verify if a rating was successfully added to a movie": true
+				}
+			]
+		},
+		{
+			"id": "ddf1972d-b258-44f6-a46e-a6f4f23cdcb8",
+			"name": "Delete a rating",
+			"url": "https://api.themoviedb.org/3/movie/18/rating",
+			"time": 289,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify if a rating was successfully deleted": true
+			},
+			"testPassFailCounts": {
+				"Verify if a rating was successfully deleted": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				289
+			],
+			"allTests": [
+				{
+					"Verify if a rating was successfully deleted": true
+				}
+			]
+		},
+		{
+			"id": "176eada2-0a03-4abd-8504-3f7eecc8c3ac",
+			"name": "Dispaly rated movies",
+			"url": "https://api.themoviedb.org/3/account/21294757/rated/movies",
+			"time": 172,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify if the second movie has a rating below 8": true
+			},
+			"testPassFailCounts": {
+				"Verify if the second movie has a rating below 8": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				172
+			],
+			"allTests": [
+				{
+					"Verify if the second movie has a rating below 8": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2918,
+	"collection": {
+		"requests": [
+			{
+				"id": "6bb3d514-204e-4ed3-a598-a5bdb85f9f1e",
+				"method": "GET"
+			},
+			{
+				"id": "715c82e8-6959-41b4-9954-9af6fdf1dd48",
+				"method": "POST"
+			},
+			{
+				"id": "d840eea6-94bb-4b58-a260-350860ca6e0d",
+				"method": "POST"
+			},
+			{
+				"id": "9ce2d0ee-6b7d-4764-ac82-de634c5a4155",
+				"method": "GET"
+			},
+			{
+				"id": "fa8709de-487e-4e32-83cc-6d37688558ad",
+				"method": "POST"
+			},
+			{
+				"id": "84386924-1364-4798-a400-605c7c58de59",
+				"method": "DELETE"
+			},
+			{
+				"id": "1b2b00e7-cc59-47a8-bf81-5a342f893a75",
+				"method": "GET"
+			},
+			{
+				"id": "f4485207-2373-4b6b-b276-e7c7a6abe4d7",
+				"method": "POST"
+			},
+			{
+				"id": "71e432cf-6656-48d0-8fbd-96457fd7d5b8",
+				"method": "GET"
+			},
+			{
+				"id": "c3730f99-e241-4a13-9561-804366367b26",
+				"method": "POST"
+			},
+			{
+				"id": "c34c1c54-d08c-4100-a5fb-f4bcbe5efca9",
+				"method": "GET"
+			},
+			{
+				"id": "41f13c53-c473-4cdd-bb4f-959ac94a9536",
+				"method": "POST"
+			},
+			{
+				"id": "ddf1972d-b258-44f6-a46e-a6f4f23cdcb8",
+				"method": "DELETE"
+			},
+			{
+				"id": "176eada2-0a03-4abd-8504-3f7eecc8c3ac",
+				"method": "GET"
+			}
+		]
+	}
+}
