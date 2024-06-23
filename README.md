@@ -40,4 +40,8 @@ Link Postman collection run [Git repo screenshot](https://github.com/armandaskal
 
 Test types / techniques used: JavaScrispts tests checking response time, status code and response body: JSON value check - positive and negative testing (black box)
 
+Below you can find the execution report that was generated through the Postman collection runner - no defects were found.
+
+
+
 
