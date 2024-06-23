@@ -8,60 +8,36 @@ Tools used: Postman
 
 Link Postman collection run [Git repo screenshot](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/TMDB.postman_test_run.json)
 
-## Tests performed
+## HTTP methods for requests: GET, POST, DEL
 
-1. GET API Authentication token
+1. GET https://api.themoviedb.org/3/authentication/token/new (API Authentication token)
 
-HTTP method for request: GET
+2. POST https://api.themoviedb.org/3/authentication/session/new (New session ID)
 
-Request description: using the access token in the Authorization header as a bearer token in order to get a request token in the body section. 
+3. POST https://api.themoviedb.org/3/list?session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb (Create a list)
 
-Test types / techniques used: checking response time and status code 
+4. GET https://api.themoviedb.org/3/account/21294757/lists?page=1&session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb (Display lists)
 
-Response status code: 200 OK
+5. POST https://api.themoviedb.org/3/list/8302327/add_item?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Add movie to a list)
 
-Below you can find the message in the response body:
+6. DEL https://api.themoviedb.org/3/list/8302332?session=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Delete a list)
 
-  {  "success": true,
-    "expires_at": "2024-06-23 14:20:51 UTC",
-    "request_token": "0b548921e1648479d64712215eee111e046c1977"}
+7. GET https://api.themoviedb.org/3/search/movie?query=fifth element&include_adult=false&language=en-US&primary_release_year=&page=1&region=USA&year= (Search a movie)
 
-JavaScript Tests:
+8. POST https://api.themoviedb.org/3/account/21294757/watchlist?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Add movie to watchlist)
 
-pm.test("Verify if status code is 200", function () {
-    pm.response.to.have.status(200);
-});
+9. GET https://api.themoviedb.org/3/account/21294757/watchlist/movies (Display watchlist movies)
 
-pm.test("Verify if the response time is less than 200ms", function () {
-    pm.expect(pm.response.responseTime).to.be.below(200);
-});
+10. POST https://api.themoviedb.org/3/account/21294757/favorite?session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb (Add movie to favorites)
 
-2. POST New session ID
+11. GET https://api.themoviedb.org/3/account/21294757/favorite/movies (Dispaly favorite movies)
 
-HTTP method for request: POST
+12. POST https://api.themoviedb.org/3/movie/614933/rating?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Add rating)
 
-Request description: create a new session id with the athorized request token
+13. DEL https://api.themoviedb.org/3/movie/18/rating (Delete a rating)
 
-Test types / techniques used: checking response time and response body: JSON value check - negative testing (checking if we can get a session ID with an invalid request token)
+14. GET https://api.themoviedb.org/3/account/21294757/rated/movies (Display rated movies)
 
-Response status code: 200 OK
-
-Below you can find the message in the response body:
-
-{ "success": true,
-    "session_id": "a8ba9319717c10ae33c86a92a12ebcc1fabc0d67"}
-
-JavaScript Tests:
-
-pm.test("Verify if the response time is less than 400ms", function () {
-    pm.expect(pm.response.responseTime).to.be.below(400);
-});
-
-pm.test("Verify if it's possible to generate a new session ID with wrong token", function () {
-    var jsonData = pm.response.json();
-    pm.expect(jsonData.failure).to.eql(true);
-});
-
-3. POST Create a list
+Test types / techniques used: JavaScrispts tests checking response time, status code and response body: JSON value check - positive and negative testing (black box)
 
 
