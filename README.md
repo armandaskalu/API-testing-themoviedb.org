@@ -42,6 +42,6 @@ Test types / techniques used: JavaScrispts tests checking response time, status 
 
 Below you can find the execution report that was generated through the Postman collection runner - no defects were found.
 
-
+![Run Results](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/Results.jpg)
 
 
