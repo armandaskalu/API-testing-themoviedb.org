@@ -13,6 +13,7 @@ Link Postman collection run [Git repo screenshot](https://github.com/armandaskal
 1. GET API Authentication token
 
 HTTP method for request: GET
+
 Request description: using the access token in the Authorization header as a bearer token in order to get a request token in the body section. 
 Test types / techniques used: checking response time and status code 
 Response status code: 200 OK
