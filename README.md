@@ -25,8 +25,9 @@ Link Postman collection run [Git repo screenshot](https://github.com/armandaskal
 7. GET Search a movie
 ![search](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/7.jpg)
 8. GET Display rated movies
-
+![rated](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/8.jpg)
 9. DEL Delete a rating
+![del]   
 
 Test types / techniques used: JavaScrispts tests checking response time, status code and response body: JSON value check - positive and negative testing (black box)
 
