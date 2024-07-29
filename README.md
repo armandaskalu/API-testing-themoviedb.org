@@ -14,8 +14,8 @@ Link Postman collection run [Git repo screenshot](https://github.com/armandaskal
 ![token](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/1.jpg)
 2. POST New session ID
 ![session](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/2.jpg)
-3. POST https://api.themoviedb.org/3/list?session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb (Create a list)
-
+3. POST Create a list
+![list](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/3.jpg)
 4. GET https://api.themoviedb.org/3/account/21294757/lists?page=1&session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb (Display lists)
 
 5. POST https://api.themoviedb.org/3/list/8302327/add_item?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Add movie to a list)
