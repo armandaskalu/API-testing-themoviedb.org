@@ -22,8 +22,8 @@ Link Postman collection run [Git repo screenshot](https://github.com/armandaskal
 ![add](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/5.jpg)
 6. DEL Delete a list
 ![delete](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/6.jpg)
-7. GET https://api.themoviedb.org/3/search/movie?query=fifth element&include_adult=false&language=en-US&primary_release_year=&page=1&region=USA&year= (Search a movie)
-
+7. GET Search a movie
+![search](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/7.jpg)
 8. POST https://api.themoviedb.org/3/account/21294757/watchlist?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Add movie to watchlist)
 
 9. GET https://api.themoviedb.org/3/account/21294757/watchlist/movies (Display watchlist movies)
