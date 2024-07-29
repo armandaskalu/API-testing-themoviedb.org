@@ -12,8 +12,8 @@ Link Postman collection run [Git repo screenshot](https://github.com/armandaskal
 
 1. GET Authentication token
 ![token](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/1.jpg)
-2. POST https://api.themoviedb.org/3/authentication/session/new (New session ID)
-
+2. POST New session ID
+![session]
 3. POST https://api.themoviedb.org/3/list?session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb (Create a list)
 
 4. GET https://api.themoviedb.org/3/account/21294757/lists?page=1&session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb (Display lists)
