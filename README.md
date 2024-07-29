@@ -18,8 +18,8 @@ Link Postman collection run [Git repo screenshot](https://github.com/armandaskal
 ![list](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/3.jpg)
 4. GET Display lists
 ![display](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/4.jpg)
-5. POST https://api.themoviedb.org/3/list/8302327/add_item?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Add movie to a list)
-
+5. POST Add movie to a list
+![add](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/5.jpg)
 6. DEL https://api.themoviedb.org/3/list/8302332?session=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Delete a list)
 
 7. GET https://api.themoviedb.org/3/search/movie?query=fifth element&include_adult=false&language=en-US&primary_release_year=&page=1&region=USA&year= (Search a movie)
