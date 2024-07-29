@@ -24,19 +24,9 @@ Link Postman collection run [Git repo screenshot](https://github.com/armandaskal
 ![delete](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/6.jpg)
 7. GET Search a movie
 ![search](https://github.com/armandaskalu/API-testing-themoviedb.org/blob/main/7.jpg)
-8. POST https://api.themoviedb.org/3/account/21294757/watchlist?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Add movie to watchlist)
+8. GET Display rated movies
 
-9. GET https://api.themoviedb.org/3/account/21294757/watchlist/movies (Display watchlist movies)
-
-10. POST https://api.themoviedb.org/3/account/21294757/favorite?session_id=5a3c2d02675d3015c0f90e0cac87db3565a43cdb (Add movie to favorites)
-
-11. GET https://api.themoviedb.org/3/account/21294757/favorite/movies (Dispaly favorite movies)
-
-12. POST https://api.themoviedb.org/3/movie/614933/rating?session_id=619a1e58931c6edd39267f40ca2bc781321fb7e0 (Add rating)
-
-13. DEL https://api.themoviedb.org/3/movie/18/rating (Delete a rating)
-
-14. GET https://api.themoviedb.org/3/account/21294757/rated/movies (Display rated movies)
+9. DEL Delete a rating
 
 Test types / techniques used: JavaScrispts tests checking response time, status code and response body: JSON value check - positive and negative testing (black box)
 
